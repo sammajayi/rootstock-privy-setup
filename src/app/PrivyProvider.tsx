@@ -2,7 +2,7 @@
 
 import { PrivyProvider } from '@privy-io/react-auth';
 import { ReactNode } from 'react';
-
+import { rsktestnet } from '@/lib/chains';
 
 export default function AuthProvider({ children }: { children: ReactNode }) {
   const appId = process.env.NEXT_PUBLIC_PRIVY_APP_ID;
@@ -13,14 +13,22 @@ export default function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-
     <PrivyProvider
       appId={appId}
       clientId={clientId}
       config={{
-        // Create embedded wallets for users who don't have a wallet
+        supportedChains: [rsktestnet],
+        defaultChain: rsktestnet,
+        
         embeddedWallets: {
-          createOnLogin: 'users-without-wallets'
+          createOnLogin: 'users-without-wallets',
+          requireUserPasswordOnCreate: false, 
+        },
+
+        appearance: {
+          theme: 'light',
+          accentColor: '#FF6600', 
+          logo: '/rootstock.png',
         }
       }}
     >
