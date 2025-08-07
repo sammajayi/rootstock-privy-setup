@@ -223,7 +223,7 @@ export default function MessageContract() {
   if (!embeddedWallet) {
     return (
       <div className="text-center p-4">
-        <p className="text-red-600">No embedded wallet found</p>
+        <p className="text-red-600 font-bold">No embedded wallet found</p>
       </div>
     );
   }

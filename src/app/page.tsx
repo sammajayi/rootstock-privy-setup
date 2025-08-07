@@ -48,10 +48,8 @@ export default function Home() {
 
         {!ready && (
           <div className="bg-white/90 shadow-xl rounded-2xl p-8 flex flex-col items-center justify-center max-w-xl w-full">
-            <div className="animate-pulse">
-              <div className="w-48 h-48 bg-gray-300 rounded-lg mb-4"></div>
-              <div className="h-8 bg-gray-300 rounded w-3/4 mb-2"></div>
-              <div className="h-4 bg-gray-300 rounded w-1/2"></div>
+            <div className="animate-spin">
+              <div className="w-12 h-12 border-4 border-dashed border-black rounded-full"></div>
             </div>
           </div>
         )}
