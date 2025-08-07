@@ -23,10 +23,17 @@ NEXT_PUBLIC_PRIVY_APP_ID=your_privy_app_id_here
 
 You can get your Privy App ID from the [Privy Dashboard](https://dashboard.privy.io)
 
-### Features Implemented
+## Features Implemented
 
 - Privy embedded wallet authentication
 - Legacy transaction support (EIP-1559 not supported)
 - Smart contract interaction with Viem
 - Custom chain configuration, specificallhy Rootstock Testnet
 - Error handling
+
+## Tech Stack
+
+- Next.js
+- Tailwind
+- Viem
+- Solidity
